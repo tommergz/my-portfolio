@@ -1,0 +1,83 @@
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+
+.choose-btn {    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 170px;
+  align-items: center;
+  margin: 0 10px;
+  background-color: #3bb3e0;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding: 10px 20px 10px 20px;
+  background-image:linear-gradient(to top, #c9f6f7 0%, #96a3a7 100%);
+  background-image:-o-linear-gradient(to top, #c9f6f7 0%, #96a3a7 100%);
+  background-image:-moz-linear-gradient(to top, #c9f6f7 0%, #96a3a7 100%);
+  background-image:-webkit-linear-gradient(to top, #c9f6f7 0%, #96a3a7 100%);
+  background-image:-ms-linear-gradient(to top, #c9f6f7 0%, #96a3a7 100%);
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  -webkit-box-shadow:0 1px 0 #777f83 inset, 0 5px 0 0 #154353, 0 10px 5px #999;
+  -moz-box-shadow:0 1px 0 #777f83 inset, 0 5px 0 0 #154353, 0 10px 5px #999;
+  -o-box-shadow:0 1px 0 #777f83 inset, 0 5px 0 0 #154353, 0 10px 5px #999;
+  box-shadow:0 1px 0 #777f83 inset, 0 5px 0 0 #154353, 0 10px 5px #999;transition:none;
+}
+
+
+.choose-btn:hover {
+  cursor: pointer;
+  background-image:linear-gradient(to top, #eaedee 0%, #2ca0ca 100%);
+  background-image:-o-linear-gradient(to top, #eaedee 0%, #2ca0ca 100%);
+  background-image:-moz-linear-gradient(to top, #eaedee 0%, #2ca0ca 100%);
+  -image:-webkit-linear-gradient(to top, #eaedee 0%, #2ca0ca 100%);
+  background-image:-ms-linear-gradient(to top, #eaedee 0%, #2ca0ca 100%);
+}
+
+.choose-btn:active {
+  top:3px;
+  background-image:linear-gradient(to top, #829da7 0%, #7f9096 100%);
+  background-image:-o-linear-gradient(to top, #829da7 0%, #7f9096 100%);
+  background-image:-moz-linear-gradient(to top, #829da7 0%, #7f9096 100%);
+  -image:-webkit-linear-gradient(to top, #829da7 0%, #7f9096 100%);
+  background-image:-ms-linear-gradient(to top, #829da7 0%, #7f9096 100%);
+  -webkit-box-shadow:0 1px 0 #777f83 inset, 0 2px 0 0 #154353, 0 5px 3px #999;
+  -moz-box-shadow:0 1px 0 #777f83 inset, 0 2px 0 0 #154353, 0 5px 3px #999;
+  -o-box-shadow:0 1px 0 #777f83 inset, 0 2px 0 0 #154353, 0 5px 3px #999;
+  box-shadow:0 1px 0 #777f83 inset, 0 2px 0 0 #154353, 0 5px 3px #999;
+}
+
+.choose-btn span {
+  font-family: 'Turret Road';
+}
+
+.lamp {
+  height: 4px;
+  width: 80%;
+  background-color: black;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.lighting {
+  background-color: #00ff00;
+}

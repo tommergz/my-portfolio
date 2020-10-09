@@ -4,9 +4,9 @@ import './footer.css';
 const Footer = () => {
   return (
     <footer>
-      <div class="footer-container">
-          <span class="year footer-text">2019</span>
-          <span class="footer-text">Artsiom Lipchyk</span>
+      <div className="footer-container">
+          <span className="year footer-text">2019</span>
+          <span className="footer-text">Artsiom Lipchyk</span>
       </div>
     </footer>
   )
