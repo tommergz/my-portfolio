@@ -1,10 +1,12 @@
 import React from 'react';
 import './header.css';
+import myPhoto from '../../assets/images/my_photo.jpg';
 
-const AppHeader = () => {
+const Header = () => {
   return (
     <div className="app-header d-flex">
-      <div className="header-container">        
+      <div className="header-container">  
+        <img src={myPhoto} alt="my_photo" id="my_photo" class="logo"></img>
         <div className="header-title-container">
           <h1 className="header-title">Artsiom Lipchyk</h1>
           <h2 className="header-title">Web & Front-end Developer</h2>
@@ -20,5 +22,5 @@ const AppHeader = () => {
   );
 };
 
-export default AppHeader;
+export default Header;
 

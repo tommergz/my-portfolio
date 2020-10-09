@@ -1,11 +1,15 @@
 const projects = [
-  {
+  { 
+    id: 1,
+    img: 'culturePortal',
     name: 'Culture Portal',
     description: 'A multilingual web portal about culture of Belarus, developed as a team project. Technologies: React.js, React Router, Bootstrap, HTML, CSS, JS.',
     demoLink: 'https://frosty-edison-e74ef2.netlify.app',
     githubLink: 'https://github.com/Egor-Alexandrovich/Culture-Portal'
   },
-  {
+  { 
+    id: 2,
+    img: 'fancyWeather',
     name: 'Weather-app',
     description: `It's a weather app. Technologies: React.js, HTML, CSS, JS.`,
     demoLink: 'https://wweather-app.netlify.app',
