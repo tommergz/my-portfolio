@@ -2,14 +2,13 @@ footer {
   position: relative;
   text-align: center;
   border-top: 1px solid black;
-  padding: 25px;
+  padding: 25px 60px;
   margin: 1px auto;
   color: #fff;
   background-color: #011c26;
 }
 
 .footer-container {
-  width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -18,4 +17,15 @@ footer {
 
 .footer-text {
   font-family: 'Titillium Web';
+}
+
+@media (max-width: 1200px) {
+  .footer-container {
+    flex-direction: column;
+    max-width: 586px;
+  }
+  
+  .year {
+    margin-bottom: 20px;
+  }
 }

@@ -3,15 +3,17 @@ import './app.css';
 import Header from '../header/header';
 import Menu from '../menu/menu';
 import ProjectList from '../project-list/project-list';
-import Skills from '../skills/skills';
+import AchievementList from '../achievement-list/achievement-list';
 import Footer from '../footer/footer';
-import projects from '../services/projects/projects';
+import projects from '../services/projects';
+import achievements from '../services/achievements';
 
 export default class App extends Component {
 
   state = {
     portfolio: true,
-    projects: projects
+    projects: projects,
+    achievements: achievements
   }
 
   switchMainBlocktoPortfolio = () => {
@@ -27,7 +29,9 @@ export default class App extends Component {
   }
 
   render() {
-    const mainBlock = this.state.portfolio ? <ProjectList projects = {this.state.projects} /> : <Skills />
+    const mainBlock = this.state.portfolio ? 
+      <ProjectList projects = {this.state.projects} /> : 
+      <AchievementList achievements = {this.state.achievements}/>
     return (
       <div className="portfolio">
         <Header />

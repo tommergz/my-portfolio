@@ -1,6 +1,7 @@
 body {
   display: block;
   background: url(../../assets/images/background.jpg);
+  margin: 0 8px 8px 8px;
 }
 
 .header-container {
@@ -14,7 +15,6 @@ body {
 .logo {
   width: 200px;
   border-radius: 50%;
-  border: 5px solid rgba(66, 124, 124, 0.4);
   margin-right: 15px;
 }
 
@@ -90,5 +90,19 @@ body {
   }
   100% {
     transform: scaleX(1) scaleY(1);
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    display: none;
+  }
+  
+  .header-container {
+    text-align: center;
+  }
+
+  .contacts {
+    justify-content: center;
   }
 }

@@ -39,9 +39,10 @@
 }
 
 .description-text {
+  width: 375px;
   font-size: 24px;
   line-height: 30px;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .description-btn-container {
@@ -49,10 +50,11 @@
 }
 
 
-.description-btn-container a, .btn {
+.btn {
+  width: 65px;
+  display: inline-block;
   text-decoration: none;
   outline: none;
-  display: inline-block;
   padding: 10px 60px;
   position: relative;
   border: 2px solid black;
@@ -82,11 +84,135 @@
   height: calc(100% + 10px);
 }
 
-.btn-cont {
+.btn-container {
   display: inline-block;
   text-align: center;
 }
 
-.btn-cont:first-child {
+.btn-container:first-child {
   margin-right: 30px;
 }  
+
+@media (max-width: 1400px) {
+  .project-wrapper {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .btn {
+    padding: 10px 55px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .btn {
+    padding: 10px 45px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .description-text {
+    width: 340px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .project-wrapper {
+    flex-direction: column;
+  }
+
+  .common-page h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .description-container {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 40px;
+  }
+
+  .description {
+    margin: 0 auto;
+  }
+
+  .description-btn-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .btn-container {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+  }
+}  
+
+@media (max-width: 686px) {
+  .preview-container {
+      width: calc(100% - 40px);
+      height: 200px;
+      margin: 20px auto;
+  }
+
+  .preview-container img {
+      width: 100%;
+      object-fit: scale-down;
+  }
+}
+
+@media (max-width: 652px) {
+  .description-btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-container {
+    width: auto;
+  }
+
+  .btn-container:first-child {
+    margin-right: 0;
+  }
+
+  .btn {
+    width: 60%;
+    padding: 10px 60px;
+  }  
+}
+
+@media (max-width: 550px) {
+  .description-text {
+    width: auto;
+  }
+  
+  .btn {
+    width: 50%;
+  }  
+}
+
+@media (max-width: 450px) {
+  .btn {
+    width: 40%;
+  }  
+}
+
+@media (max-width: 350px) {
+  .description-text {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 5px 0;
+  }  
+
+  .btn {
+    width: 30%;
+  }  
+}
+
+@media (max-width: 350px) {
+  .btn {
+    width: 65px;
+    padding: 10px 35px;
+  }  
+}

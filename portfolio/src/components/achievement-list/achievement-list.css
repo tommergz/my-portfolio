@@ -1,0 +1,11 @@
+.achievement-list {
+  margin: 0 auto 40px; 
+  list-style-type: none;
+  padding: 0;
+}
+
+@media (max-width: 1400px) {
+  .achievement-list {
+    max-width: 80%;
+  }
+}

@@ -18,7 +18,7 @@ button::-moz-focus-inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 170px;
+  width: 200px;
   align-items: center;
   margin: 0 10px;
   background-color: #3bb3e0;
@@ -80,4 +80,22 @@ button::-moz-focus-inner {
 
 .lighting {
   background-color: #00ff00;
+}
+
+@media (max-width: 550px) {
+  .choose-btn {
+    width: 38%;
+  }
+}
+
+@media (max-width: 450px) {
+  .menu {
+    flex-direction: column;
+    height: 140px;
+    justify-content: space-around;
+  }
+
+  .choose-btn {
+    width: 80%;
+  }
 }
