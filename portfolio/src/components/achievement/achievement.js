@@ -8,6 +8,9 @@ const Achievement = ({data}) => {
     <div className="achivement-wrapper">
       <h1>{technology}</h1>
       <a href={link} target="_blank" rel="noopener noreferrer">
+        <div className="loader">
+          <div className="bar"></div>
+        </div>
         <img src={images[img]} alt="Certificate" className="certificate"></img>
       </a>            
     </div>

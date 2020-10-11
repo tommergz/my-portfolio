@@ -13,7 +13,8 @@ const Project = ({data}) => {
         <div className="description">
           <h1 className="description-title">{name}</h1>
           <p className="description-text">{description}</p>
-        </div><div className="description-btn-container">
+        </div>
+        <div className="description-btn-container">
           <div className="btn-container">
             <a className="btn" href={demoLink} target="_blank" rel="noopener noreferrer">Demo</a>
           </div>

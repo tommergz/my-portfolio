@@ -8,7 +8,7 @@ const achievements = [
   { 
     id: 2,
     img: 'reactReduxCertificate',
-    technology: 'React/Redux',
+    technology: 'React',
     link: 'https://app.rs.school/certificate/6b487upp',
   }
 ]

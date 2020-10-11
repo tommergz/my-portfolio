@@ -8,4 +8,4 @@ const AchievementList = ({achievements}) => {
   return <ul className="achievement-list">{allAchievementsList}</ul>
 }
 
-export default AchievementList;
+export default React.memo(AchievementList);

@@ -23,7 +23,7 @@ body {
 }
 
 .description-title, .description-text {
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .header-title-container h1 {
@@ -50,7 +50,7 @@ body {
 
 }
 
-.contacts a i:hover  {
+.contacts a:hover  {
   animation-name: pulse;
   animation-duration: 2s;
   animation-iteration-count: infinite;

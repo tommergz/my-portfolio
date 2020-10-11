@@ -15,6 +15,21 @@ export default class App extends Component {
     projects: projects,
     achievements: achievements
   }
+  
+  // componentDidMount() { 
+  //   if (localStorage.getItem("tommergState")) {
+  //     const localStorageState = JSON.parse(localStorage.getItem("tommergState"));
+  //     this.setState({
+  //       portfolio: localStorageState.portfolio,
+  //       projects: localStorageState.projects,
+  //       achievements: localStorageState.achievements
+  //     })
+  //   }
+  // }
+
+  // componentDidUpdate() {
+  //   localStorage.setItem("tommergState", JSON.stringify(this.state));
+  // }
 
   switchMainBlocktoPortfolio = () => {
     this.setState({
