@@ -1,16 +1,20 @@
+import backgroundImage from '../images/background.jpg';
+import avatar from '../images/my_photo.jpg';
 import culturePortal from '../images/culture-portal.png';
 import fancyWeather from '../images/fancy-weather.jpg';
 import jsCertificate from '../images/js-certificate.png';
-import reactReduxCertificate from '../images/react-redux-certificate.png'
+import reactCertificate from '../images/react-certificate.png'
 import checkers from '../images/checkers.png';
 import chess from '../images/chess.jpg';
 import piskelClone from '../images/piskel_clone.jpg';
 
 const images = {
+  'background': backgroundImage,
+  'avatar': avatar,
   'culturePortal': culturePortal,
   'fancyWeather': fancyWeather,
   'jsCertificate': jsCertificate,
-  'reactReduxCertificate': reactReduxCertificate,
+  'reactCertificate': reactCertificate,
   'checkers': checkers,
   'chess': chess,
   'piskelClone': piskelClone

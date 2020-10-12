@@ -1,6 +1,6 @@
 import React from 'react';
 import './project.css';
-import images from '../../assets/img-obj/img-obj'
+import images from '../../assets/img-obj/img-obj';
 
 const Project = ({data}) => {
   const {img, name, description, demoLink, githubLink} = data;
