@@ -1,16 +1,10 @@
 body {
-  display: block;
-  background: url(../../assets/images/background.jpg);
   margin: 0;
-}
-
-.white-background {
-  height: 100vh;
-  background-color: white;
 }
 
 .main-page {
   display: block;
+  background: url(../../assets/images/background.jpg);
 }
 
 .hiden-main-page {

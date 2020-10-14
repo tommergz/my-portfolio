@@ -9,11 +9,11 @@ import Loading from '../loading/loading';
 import projects from '../services/projects';
 import achievements from '../services/achievements';
 import images from '../../assets/img-obj/img-obj'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default class App extends Component {
 
   state = {
-    portfolio: true,
     projects: projects,
     achievements: achievements,
     imagesLoaded: 0,
@@ -58,48 +58,34 @@ export default class App extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return this.state.showMainPage !== nextState.showMainPage ||
-    this.state.portfolio !== nextState.portfolio
-  }
-
-  switchMainBlocktoSkills = () => {
-    this.setState({
-      portfolio: false
-    })
-  }
-
-  switchMainBlocktoPortfolio = () => {
-    this.setState({
-      portfolio: true
-    })
+    return this.state.showMainPage !== nextState.showMainPage
   }
 
   render() {
-    console.log('r')
-    const listBlock = this.state.portfolio ? 
-      <ProjectList projects = {this.state.projects} /> : 
-      <AchievementList achievements = {this.state.achievements}/>;
     const allImagesLoaded = this.state.imagesLoaded === 9;
-    const achivievementList = allImagesLoaded ? null : 
-    <AchievementList achievements = {this.state.achievements}/>;  
     const loading = allImagesLoaded ? null : <Loading />;
-    const background = allImagesLoaded ? '' : 'white-background';
     const mainPageVisibility = allImagesLoaded ? 'main-page' : 'hiden-main-page';
     return (
-      <div className={background}>
-        {loading}
-        <div className={mainPageVisibility}>
-          <Header />
-          <Menu 
-            portfolio = {this.state.portfolio}
-            switchMainBlocktoPortfolio = {this.switchMainBlocktoPortfolio} 
-            switchMainBlocktoSkills = {this.switchMainBlocktoSkills}
-          />
-          {listBlock}
-          {achivievementList}
-          <Footer />
+      <Router>
+        <div>
+          {loading}
+          <div className={mainPageVisibility}>
+            <Header />
+            <Menu 
+              portfolio = {this.state.portfolio}
+              switchMainBlocktoPortfolio = {this.switchMainBlocktoPortfolio} 
+              switchMainBlocktoSkills = {this.switchMainBlocktoSkills}
+            />
+            <Route path="/" exact>
+              <ProjectList projects = {this.state.projects} />
+            </Route>
+            <Route path="/achievements">
+              <AchievementList achievements = {this.state.achievements}/>
+            </Route>
+            <Footer />
+          </div>
         </div>
-      </div>
+      </Router>
     )
   }  
 }
