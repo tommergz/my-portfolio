@@ -14,6 +14,10 @@
   margin-top: 40px;
 }
 
+.technology {
+  margin: 15px 0 10px;
+}
+
 .achivement-wrapper a {
   display: flex;
   justify-content: center;
