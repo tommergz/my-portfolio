@@ -89,7 +89,7 @@ button::-moz-focus-inner {
 
 @media (max-width: 550px) {
   .choose-btn {
-    width: 38%;
+    width: 170px;
   }
 }
 
@@ -100,7 +100,12 @@ button::-moz-focus-inner {
     justify-content: space-around;
   }
 
+  .link {
+    width: 70%;
+    display: flex;
+  }
+
   .choose-btn {
-    width: 80%;
+    width: 100%;
   }
 }
