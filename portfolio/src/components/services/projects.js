@@ -3,7 +3,8 @@ const projects = [
     id: +Date.now().toString() + 1,
     img: 'slider',
     name: 'Slider',
-    description: `Slider. Only core react libraries. Just: "react", "react-dom" as dependencies + build related ones.`,
+    description: `Only core react libraries. Just: "react", "react-dom" as dependencies + build related ones. 
+    The slider supports swipes on desktop and mobile (click/tap the second from the left button in the top-left corner to turn the swipes on/off).`,
     demoLink: 'https://sliderman.netlify.app',
     githubLink: 'https://github.com/tommergz/slider/tree/slider'
   },
