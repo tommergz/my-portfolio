@@ -1,6 +1,14 @@
 const projects = [
+  {
+    id: +Date.now().toString() + 1,
+    img: 'slider',
+    name: 'Slider',
+    description: `Slider. Only core react libraries. Just: "react", "react-dom" as dependencies + build related ones.`,
+    demoLink: 'https://sliderman.netlify.app',
+    githubLink: 'https://github.com/tommergz/slider/tree/slider'
+  },
   { 
-    id: 1,
+    id: +Date.now().toString() + 2,
     img: 'culturePortal',
     name: 'Culture Portal',
     description: 'A multilingual web portal about culture of Belarus, developed as a team project. Technologies: React.js, React Router, Bootstrap, HTML, CSS, JS.',
@@ -8,7 +16,7 @@ const projects = [
     githubLink: 'https://github.com/Egor-Alexandrovich/Culture-Portal'
   },
   { 
-    id: 2,
+    id: +Date.now().toString() + 3,
     img: 'fancyWeather',
     name: 'Weather-app',
     description: `It's a weather app. Technologies: React.js, HTML, CSS, JS.`,
@@ -16,7 +24,7 @@ const projects = [
     githubLink: 'https://github.com/tommergz/fancy-weather/tree/fancy-weather/fancy-weather'
   },
   {
-    id: 3,
+    id: +Date.now().toString() + 4,
     img: 'checkers',
     name: 'Checkers app',
     description: `A fully functional checkers game.`,
@@ -24,7 +32,7 @@ const projects = [
     githubLink: 'https://github.com/tommergz/checkers'
   },
   {
-    id: 4,
+    id: +Date.now().toString() + 5,
     img: 'chess',
     name: 'Chess app',
     description: `A fully functional chess game.`,
@@ -32,7 +40,7 @@ const projects = [
     githubLink: 'https://github.com/tommergz/chess'
   },
   {
-    id: 5,
+    id: +Date.now().toString() + 6,
     img: 'piskelClone',
     name: 'Piskel-Clone',
     description: `A simplified clone of Piskel, a web-based tool for creating animated sprites & pixel art.`,

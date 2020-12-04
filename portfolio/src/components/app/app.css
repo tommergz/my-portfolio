@@ -7,6 +7,18 @@ body {
   background: url(../../assets/images/background.jpg);
 }
 
-.hiden-main-page {
+.hiden-page {
   display: none;
+}
+
+.visible-block {
+  display: block;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }

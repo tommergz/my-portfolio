@@ -9,42 +9,24 @@ import Loading from '../loading/loading';
 import projects from '../services/projects';
 import achievements from '../services/achievements';
 import images from '../../assets/img-obj/img-obj'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default class App extends Component {
 
   state = {
-    projects: projects,
-    achievements: achievements,
     imagesLoaded: 0,
-    showMainPage: false
+    showMainPage: false,
+    portfolio: true
   }
-  
-  // componentDidMount() { 
-  //   if (localStorage.getItem("tommergState")) {
-  //     const localStorageState = JSON.parse(localStorage.getItem("tommergState"));
-  //     this.setState({
-  //       portfolio: localStorageState.portfolio,
-  //       projects: localStorageState.projects,
-  //       achievements: localStorageState.achievements
-  //     })
-  //   }
-  // }
-
-  // componentDidUpdate() {
-  //   localStorage.setItem("tommergState", JSON.stringify(this.state));
-  // }
 
   imagesLoading = (data) => {
     for (let key in data) {
-      let newImg = new Image();
+      const newImg = new Image();
       newImg.src = data[key];
       newImg.onload = () => { 
-        if (this.state.imagesLoaded === 8) {
-          this.setState( (state) => ({
-            imagesLoaded : state.imagesLoaded + 1,
+        if (this.state.imagesLoaded === 9) {
+          this.setState({
             showMainPage: true
-          }) ) 
+          })  
         }
         else {
           this.setState( (state) => ({imagesLoaded : state.imagesLoaded + 1}) ) 
@@ -54,38 +36,65 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+    if (localStorage.getItem("tommergState")) {
+      const localStorageState = JSON.parse(localStorage.getItem("tommergState"));
+      this.setState({
+        portfolio: localStorageState.portfolio,
+      })
+    }
     this.imagesLoading(images)
   }
 
+  componentDidUpdate() {
+    localStorage.setItem("tommergState", JSON.stringify(this.state));
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
-    return this.state.showMainPage !== nextState.showMainPage
+    return this.state.showMainPage !== nextState.showMainPage ||
+    this.state.portfolio !== nextState.portfolio
+  }
+
+  switchMainBlocktoSkills = () => {
+    this.setState({
+      portfolio: false
+    })
+  }
+
+  switchMainBlocktoPortfolio = () => {
+    this.setState({
+      portfolio: true
+    })
   }
 
   render() {
-    const allImagesLoaded = this.state.imagesLoaded === 9;
+    const portfolio = this.state.portfolio;
+    const allImagesLoaded = this.state.showMainPage;
     const loading = allImagesLoaded ? null : <Loading />;
-    const mainPageVisibility = allImagesLoaded ? 'main-page' : 'hiden-main-page';
+    const mainPageVisibility = allImagesLoaded ? 'main-page' : 'hiden-page';
+    const contentVisibility = allImagesLoaded ? 'visible' : 'invisible';
+    const portfolioBlockVisibility = allImagesLoaded && portfolio ? 'visible-block' : 'hiden-page';
+    const skillsBlockVisibility = allImagesLoaded && !portfolio ? 'visible-block' : 'hiden-page';
     return (
-      <Router>
-        <div>
-          {loading}
-          <div className={mainPageVisibility}>
-            <Header />
-            <Menu 
-              portfolio = {this.state.portfolio}
-              switchMainBlocktoPortfolio = {this.switchMainBlocktoPortfolio} 
-              switchMainBlocktoSkills = {this.switchMainBlocktoSkills}
-            />
-            <Route path="/" exact>
-              <ProjectList projects = {this.state.projects} />
-            </Route>
-            <Route path="/achievements">
-              <AchievementList achievements = {this.state.achievements}/>
-            </Route>
-            <Footer />
+      <div>
+        {loading}
+        <div className={mainPageVisibility}>
+          <Header />
+          <Menu 
+            portfolio={this.state.portfolio}
+            switchMainBlocktoPortfolio={this.switchMainBlocktoPortfolio} 
+            switchMainBlocktoSkills={this.switchMainBlocktoSkills}
+          />
+          <div className={contentVisibility}>
+            <div className={portfolioBlockVisibility}>
+              <ProjectList projects={projects} />
+            </div>
+            <div className={skillsBlockVisibility} >
+              <AchievementList achievements={achievements} />
+            </div>
           </div>
+          <Footer />
         </div>
-      </Router>
+      </div>
     )
   }  
 }

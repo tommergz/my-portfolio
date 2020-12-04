@@ -7,6 +7,7 @@ import reactCertificate from '../images/react-certificate.png'
 import checkers from '../images/checkers.png';
 import chess from '../images/chess.jpg';
 import piskelClone from '../images/piskel_clone.jpg';
+import slider from '../images/slider.jpg';
 
 const images = {
   'background': backgroundImage,
@@ -17,7 +18,8 @@ const images = {
   'reactCertificate': reactCertificate,
   'checkers': checkers,
   'chess': chess,
-  'piskelClone': piskelClone
+  'piskelClone': piskelClone,
+  'slider': slider
 }
 
 export default images;
