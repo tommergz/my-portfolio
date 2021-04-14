@@ -4,7 +4,7 @@ const projects = [
     img: 'twitter',
     name: 'Twitter-like social network',
     description: `It's a full-stack project. 
-    Back-end tehnologies: Node.js, Express, MongoDB, Socket.IO. 
+    Back-end teсhnologies: Node.js, Express, MongoDB, Socket.IO. 
     Front-end technologies: React.js, JS, HTML, CSS.`,
     demoLink: 'https://tommern.netlify.app',
     githubLink: 'https://edu-gitlab.leverx-group.com/nodejs-2021-courses-hw/artsiom-lipchyk-hw-project/-/tree/my-home-work-9'
