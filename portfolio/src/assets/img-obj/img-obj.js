@@ -8,6 +8,7 @@ import checkers from '../images/checkers.png';
 import chess from '../images/chess.jpg';
 import piskelClone from '../images/piskel_clone.jpg';
 import slider from '../images/slider.jpg';
+import twitter from '../images/twitter.png';
 
 const images = {
   'background': backgroundImage,
@@ -19,7 +20,8 @@ const images = {
   'checkers': checkers,
   'chess': chess,
   'piskelClone': piskelClone,
-  'slider': slider
+  'slider': slider,
+  'twitter': twitter
 }
 
 export default images;
