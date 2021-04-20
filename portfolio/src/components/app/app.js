@@ -23,7 +23,7 @@ export default class App extends Component {
       const newImg = new Image();
       newImg.src = data[key];
       newImg.onload = () => { 
-        if (this.state.imagesLoaded === 9) {
+        if (this.state.imagesLoaded === 11) {
           this.setState({
             showMainPage: true
           })  

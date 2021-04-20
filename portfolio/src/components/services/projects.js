@@ -4,10 +4,10 @@ const projects = [
     img: 'twitter',
     name: 'Twitter-like social network',
     description: `It's a full-stack project. 
-    Back-end technologies: Node.js, Express, MongoDB, Socket.IO. 
+    Back-end technologies: Node.js, Express, MongoDB, Socket.IO, Nodemailer. 
     Front-end technologies: React.js, JS, HTML, CSS.`,
     demoLink: 'https://tommern.netlify.app',
-    githubLink: 'https://edu-gitlab.leverx-group.com/nodejs-2021-courses-hw/artsiom-lipchyk-hw-project/-/tree/my-home-work-9'
+    githubLink: 'https://github.com/tommergz/my-twitter/tree/my-twitter'
   },
   {
     id: +Date.now().toString() + 6,

@@ -3,7 +3,8 @@ import avatar from '../images/my_photo.jpg';
 import culturePortal from '../images/culture-portal.png';
 import fancyWeather from '../images/fancy-weather.jpg';
 import jsCertificate from '../images/js-certificate.png';
-import reactCertificate from '../images/react-certificate.png'
+import reactCertificate from '../images/react-certificate.png';
+import nodejsCertificate from '../images/nodejs-certificate.png';
 import checkers from '../images/checkers.png';
 import chess from '../images/chess.jpg';
 import piskelClone from '../images/piskel_clone.jpg';
@@ -17,6 +18,7 @@ const images = {
   'fancyWeather': fancyWeather,
   'jsCertificate': jsCertificate,
   'reactCertificate': reactCertificate,
+  'nodejsCertificate': nodejsCertificate,
   'checkers': checkers,
   'chess': chess,
   'piskelClone': piskelClone,
